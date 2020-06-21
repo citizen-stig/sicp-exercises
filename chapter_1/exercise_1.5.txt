@@ -1,0 +1,15 @@
+(define (p) (p))   ; function that returns it's value
+
+(define (text x y)  ; if first param is 0 return zero 
+    (if (= x 0)     ; otherwise return second
+        0
+        y))
+
+(test 0 (p))
+
+
+100
+; if interperter uses "applicative order" then result is 0,
+; because first param is defined and can be returned immediately
+; if there's "normal order", 
+; then it will be stack overflow, because of infinite recursion
